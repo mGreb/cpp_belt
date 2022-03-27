@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(01_matrix_sum 01_matrix_sum.cpp)
 add_executable(02_avg_temperature_2 02_avg_temperature_2.cpp)
+add_executable(03_block_mass 03_block_mass.cpp)
