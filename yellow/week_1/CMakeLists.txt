@@ -1,7 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
-project(yellow)
-
-set(CMAKE_CXX_STANDARD 20)
+project(yellow_week_1)
 
 add_executable(01_matrix_sum 01_matrix_sum.cpp)
 add_executable(02_avg_temperature_2 02_avg_temperature_2.cpp)
