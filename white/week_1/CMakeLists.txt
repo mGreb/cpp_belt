@@ -1,0 +1,11 @@
+project(white_week_1)
+
+add_executable(01_a+b.cpp 01_a+b.cpp)
+add_executable(02_min_string 02_min_string.cpp)
+add_executable(03_equation 03_equation.cpp)
+add_executable(04_division 04_division.cpp)
+add_executable(05_merch_price 05_merch_price.cpp)
+add_executable(06_even_numbers 06_even_numbers.cpp)
+add_executable(07_second_occurence 07_second_occurence.cpp)
+add_executable(08_gcd 08_gcd.cpp)
+add_executable(09_binary 09_binary.cpp)
