@@ -1,0 +1,10 @@
+project(white_week_3)
+
+add_executable(01_abs_sort 01_abs_sort.cpp)
+add_executable(02_sort_strings 02_sort_strings.cpp)
+add_executable(03_sorted_strings 03_sorted_strings.cpp)
+add_executable(04_names_1 04_names_1.cpp)
+add_executable(05_names_2 05_names_2.cpp)
+add_executable(06_reversible_string 06_reversible_string.cpp)
+add_executable(07_names_3 07_names_3.cpp)
+add_executable(08_incognizable 08_incognizable.cpp)
