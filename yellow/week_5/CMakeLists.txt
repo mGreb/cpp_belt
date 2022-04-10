@@ -1,0 +1,6 @@
+project(yellow_week_5)
+
+add_executable(01_first_inheritance 01_first_inheritance.cpp)
+add_executable(02_notification_sender 02_notification_sender.cpp)
+add_executable(03_shapes 03_shapes.cpp)
+add_executable(04_refactoring 04_refactoring.cpp)
