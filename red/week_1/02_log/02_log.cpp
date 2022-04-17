@@ -12,34 +12,33 @@ public:
 	
 	void SetLogLine(bool value) { log_line = value; }
 	void SetLogFile(bool value) { log_file = value; }
-	
-	bool GetLogLine() { return log_line; }
-	bool GetLogFile() { return log_file; }
+	void SetLine(int line_) { line = line_; }
+	void SetFile(const std::string &file_) { file = file_;}
 	
 	void Log(const std::string& message)
 	{
+		if (log_file && !log_line)
+			os << file << " ";
+		if (log_file && log_line)
+			os << file << ":" << line << " ";
+		if (!log_file && log_line)
+			os << "Line " << line << " ";
+		
 		os << message << "\n";
 	}
-	
-	std::ostream& GetStream() { return os; }
 	
 private:
 	std::ostream& os;
 	bool log_line = false;
 	bool log_file = false;
+	int line = 0;
+	std::string file;
 };
 
-#define LOG(logger, message) {                    \
-    const bool line = logger.GetLogLine();        \
-    const bool file = logger.GetLogFile();        \
-    std::ostream &s = logger.GetStream();         \
-    if (file && !line)                            \
-        s << __FILE__ << " ";                     \
-    if (file && line)                             \
-        s << __FILE__ << ":" << __LINE__ << " ";  \
-    if (!file && line)                            \
-        s << "Line " << __LINE__ << " ";          \
-    logger.Log(message);                          \
+#define LOG(logger, message) {  \
+    logger.SetFile(__FILE__);   \
+    logger.SetLine(__LINE__);   \
+        logger.Log(message);    \
 }
 
 void TestLog()
