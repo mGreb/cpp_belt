@@ -6,3 +6,4 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 add_subdirectory(white)
 add_subdirectory(yellow)
+add_subdirectory(red)
